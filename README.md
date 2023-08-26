@@ -116,7 +116,7 @@ Now take a look at Discord... you will see the message appear!
 <a id="example2"></a>
 ## Example 2 - In game chat events sent to Discord
 
-Use example 1 above to create a class baseplate and setup the SendDiscord() function.
+Use example 1 above to create a classic baseplate and setup the SendDiscord() function.
 
 Then simply paste in the below code. This will send the chat from the Roblox game to Discord! Note, you may not see the events unless you run in Roblox Studio using the "Team Test" button.
 
