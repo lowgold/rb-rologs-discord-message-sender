@@ -4,6 +4,15 @@ The RoLogs Discord Message Sender is a drop in LUA file that allows you to call 
 
 First you need to purchase a token from the RoLogs discord channel. You can purchase for a given time frame.. e.g. 1 day, 1 week, 1 month.. or longer. To build the token RoLogs will ask you for the Discord webhook URL that you wish to use. You will need one token per Discord webhook that you want to use.
 
+## Table Of Contents
+
+- [Deliverables](#deliverables)
+- [Example 1 - Simple example](#example1)
+- [Example 2 - In game chat events sent to Discord](#example2)
+
+<br/>
+
+<a name="deliverables"></a>
 ## Deliverables
 
 Once a purchased you will receive:
@@ -14,7 +23,8 @@ Once a purchased you will receive:
 
 <br/>
 
-## Example
+<a id="example1"></a>
+## Example 1 - Simple example
 
 The following example shows how messages can be sent to Discord based on some in game events.
 
@@ -100,3 +110,26 @@ Discord responded with id 1144897406429823067 using author Spidey Bot on webhook
 Now take a look at Discord... you will see the message appear!
 
 ![Message received in Discord!](https://raw.githubusercontent.com/lowgold/rb-rologs-discord-message-sender/main/discord_message_received.png)
+
+<br/>
+
+<a id="example2"></a>
+## Example 2 - In game chat events sent to Discord
+
+Use example 1 above to create a class baseplate and setup the SendDiscord() function.
+
+Then simply paste in the below code. This will send the chat from the Roblox game to Discord! Note, you may not see the events unless you run in Roblox Studio using the "Team Test" button.
+
+```lua
+local SendDiscord = require(game:GetService("ServerScriptService"):WaitForChild("DiscordMessenger"))
+
+local myToken = "..... the token ....."
+
+game.Players.PlayerAdded:Connect(function(player) 
+	SendDiscord(myToken, player.Name .. " has joined the game!")
+	player.Chatted:Connect(function(msg)
+		SendDiscord(myToken, player.Name .. ": " .. msg)
+	end) 
+end)
+```
+
