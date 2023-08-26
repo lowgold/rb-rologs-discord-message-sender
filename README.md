@@ -99,4 +99,4 @@ Discord responded with id 1144897406429823067 using author Spidey Bot on webhook
 
 Now take a look at Discord... you will see the message appear!
 
-[Message received in Discord!](https://raw.githubusercontent.com/lowgold/rb-rologs-discord-message-sender/main/discord_message_received.png)
+![Message received in Discord!](https://raw.githubusercontent.com/lowgold/rb-rologs-discord-message-sender/main/discord_message_received.png)
