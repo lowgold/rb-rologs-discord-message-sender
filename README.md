@@ -1,6 +1,6 @@
 # rb-rologs-discord-message-sender
 
-The RoLogs Discord Message Sender is a simple drop in LUA file that allows you to call discord web hooks directly from your own Roblox game.
+The RoLogs Discord Message Sender is a drop in LUA file that allows you to call discord web hooks directly from your own Roblox game.
 
 First you need to purchase a token from the RoLogs discord channel. You can purchase for a given time frame.. e.g. 1 day, 1 week, 1 month.. or longer. To build the token RoLogs will ask you for the Discord webhook URL that you wish to use. You will need one token per Discord webhook that you want to use.
 
